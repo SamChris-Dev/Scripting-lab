@@ -1,3 +1,5 @@
+# LABORATORY WORK 
+# Guess the secret number program
 secret_number = 777
 
 print(
