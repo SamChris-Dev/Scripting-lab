@@ -1,3 +1,11 @@
+# A simple tax calculatorgit
+# if the citizen's income was not higher than 85,528 thalers, 
+# the tax was equal to 18% of the income minus 556 thalers and 2 cents 
+
+# if the income was higher than this amount, 
+# the tax was equal to 14,839 thalers and 2 cents, plus 32% of the surplus over 85,528 thalers.
+
+
 income = float(input("Enter the annual income: "))
 surplus = income - 85528
 
