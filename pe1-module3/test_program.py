@@ -55,3 +55,31 @@
 #         break
 #     print(i, end=" ")
 #     i += 1
+
+# numbers = [10, 5, 7, 2, 1]
+# print("Original list contents:", numbers)  # Printing original list contents.
+
+# numbers[0] = 111
+# print("New list contents: ", numbers)  # Current list contents.
+
+# numbers = [10, 5, 7, 2, 1]
+# print("Original list contents:", numbers)  # Printing original list contents.
+
+# numbers[0] = 111
+# print("\nPrevious list contents:", numbers)  # Printing previous list contents.
+
+# numbers[1] = numbers[4]  # Copying value of the fifth element to the second.
+# print("New list contents:", numbers)  # Printing current list contents.
+
+# print("Hello")
+# print("okay")
+# print("People")
+
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+# length = len(numbers)
+# print("The length of the list is: ", length)
+# print(numbers)
+
+# del numbers[9]
+# print("The length of the list is: ", len(numbers))
+# print(numbers)
