@@ -83,3 +83,14 @@
 # del numbers[9]
 # print("The length of the list is: ", len(numbers))
 # print(numbers)
+
+
+# my_list = [10, 1, 8, 3, 5]
+# total = 0
+
+# for i in my_list:
+#     total += i
+
+# print(total)
+
+ 
