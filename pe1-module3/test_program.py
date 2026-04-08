@@ -93,4 +93,47 @@
 
 # print(total)
 
- 
+# list = [16,23,0,7,4,20,26]
+# print("Before the bubble sort algorithm", list)
+# swapped = True
+
+# while swapped:
+#     swapped = False
+#     for i in range(len(list) - 1):
+#         if list[i] > list[i+1]:
+#             swapped = True
+#             list[i],list[i+1] = list[i+1],list[i]
+#             print("During the swap", list)
+# print("After the bubble sort algorithhm", list)           
+
+
+# list = [2,3,1]
+# print("Before the bubble sort algorithm", list)
+# swapped = True
+
+# while swapped:
+#     swapped = False
+#     for i in range(len(list) - 1):
+#         if list[i] > list[i+1]:
+#             swapped = True
+#             list[i],list[i+1] = list[i+1],list[i]
+# print("After the bubble sort algorithhm", list)           
+
+my_list = []
+swapped = True
+num = int(input("How many elements do you want to sort: "))
+
+for i in range(num):
+    val = float(input("Enter a list element: "))
+    my_list.append(val)
+
+while swapped:
+    swapped = False
+    for i in range(len(my_list) - 1):
+        if my_list[i] > my_list[i + 1]:
+            swapped = True
+            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+
+print("\nSorted:")
+print(my_list)
+
