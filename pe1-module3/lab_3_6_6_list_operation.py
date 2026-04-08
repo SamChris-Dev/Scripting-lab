@@ -30,7 +30,7 @@ print(new_list)
 
 # print(new_list)
 
-# for j in range(len(my_list)):
+# for j in my_list:
 #     sample = my_list[j]
 #     for i in range(1+j, len(my_list)):
 #         if sample == my_list[i]:

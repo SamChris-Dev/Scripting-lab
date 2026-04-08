@@ -119,21 +119,31 @@
 #             list[i],list[i+1] = list[i+1],list[i]
 # print("After the bubble sort algorithhm", list)           
 
-my_list = []
-swapped = True
-num = int(input("How many elements do you want to sort: "))
+# my_list = []
+# swapped = True
+# num = int(input("How many elements do you want to sort: "))
 
-for i in range(num):
-    val = float(input("Enter a list element: "))
-    my_list.append(val)
+# for i in range(num):
+#     val = float(input("Enter a list element: "))
+#     my_list.append(val)
 
-while swapped:
-    swapped = False
-    for i in range(len(my_list) - 1):
-        if my_list[i] > my_list[i + 1]:
-            swapped = True
-            my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
+# while swapped:
+#     swapped = False
+#     for i in range(len(my_list) - 1):
+#         if my_list[i] > my_list[i + 1]:
+#             swapped = True
+#             my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
 
-print("\nSorted:")
-print(my_list)
+# print("\nSorted:")
+# print(my_list)
 
+# my_list = [1,2,4,4,1,4,2,6,2,9]
+
+# for j in my_list:
+#     sample = my_list[j]
+#     for i in range(1+j, len(my_list)):
+#         if sample == my_list[i]:
+#             print(my_list[i])
+#             # del new_list[i]
+
+# print(new_list)
