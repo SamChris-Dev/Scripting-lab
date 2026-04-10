@@ -36,8 +36,3 @@ for i in range(len(test_years)):
         print("OK")
     else:
         print("Failed")
-
-# the_year = int(input("Enter year: "))
-# the_month = int(input("Enter Month: "))
-
-# print(days_in_month(the_year,the_month))
