@@ -230,3 +230,81 @@
 #     print(a+b+c)
 
 # add(c=1,a=2)
+
+
+# factorial 
+#  0! = 1
+#  1! = 1
+#  2! = 1 * 2
+#  3! = 1 * 2 * 3
+#  4! = 1 * 2 * 3 * 4
+
+# def factorial_func(n):
+#     if n < 0:
+#         return None
+#     if n < 2:
+#         return 1
+    
+#     product = 1
+#     for i in range(2, n+1):
+#         product *= i
+#     return product
+
+# n = int(input("Enter a number: "))
+# print("The ans is: ", factorial_func(n))
+
+
+# def fibonacci(n):
+#     if n < 3:
+#         return 1
+#     no1 =1
+#     no2 = 1
+#     sum = 0
+#     for i in range (2,n):
+#         sum = no1 + no2
+#         no1 = no2
+#         no2 = sum
+#     return sum
+
+# n = int(input("Please enter your number: "))
+# print("Since n=",n ,"Then the answer is:", fibonacci(n))
+
+
+# def fib(n):
+#     if n < 3:
+#         return 1
+#     return fib(n-1) + fib(n-2)
+
+# n = int(input("Please enter your number: "))
+# print(fib(n))
+
+# list = ["Samwel","google",6,7,8,3,5,1,1.0]
+# print(list)
+
+# my_tuple = (1, 10, 100, 1000)
+
+# my_tuple.append(10000)
+# del my_tuple[0]
+# my_tuple[1] = -10
+
+# var = 123
+
+# t1 = (1, )
+# t2 = (2, )
+# t3 = (3, var)
+
+# t1 = t3 
+# t2 = t1
+# t3 = t2
+
+# print(t1, t2, t3)
+
+
+# var2 = 123
+
+# t10 = (1, )
+# t20 = (2, )
+# t30 = (3, var)
+
+# t10, t20, t30 = t30, t10, t20
+# print(t10, t20, t30)
