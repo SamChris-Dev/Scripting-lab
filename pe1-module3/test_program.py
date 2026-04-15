@@ -346,4 +346,3 @@
 #         adding += score
 #         counter += 1
 #     print(name, ":", adding / counter)
-
