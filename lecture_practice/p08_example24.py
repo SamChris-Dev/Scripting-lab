@@ -6,4 +6,4 @@ for char in string.lower():
   if char == 'b':
     count_a += 1
 
-print(f"Number of 'a' characters: {count_a}")
+print(f"Number of 'b' characters: {count_a}")
