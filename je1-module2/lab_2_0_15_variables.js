@@ -11,5 +11,4 @@ let phone3 = "0800 1111"
 let email3 = "libero@convallis.edu"
 
 console.log(name1 + " | " + phone1 + " | " + email1);
-console.log(name2 + " | " + phone2 + " | " + email2);
 console.log(name3 + " | " + phone3 + " | " + email3);
