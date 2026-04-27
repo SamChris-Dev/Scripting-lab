@@ -457,7 +457,7 @@
 # 	print("I won")
 # else:
 # 	print("Tie!")
-num2 = 0
-num1 = 2
-num = num1 / num2
-print("hello " + num)
+# num2 = 0
+# num1 = 2
+# num = num1 / num2
+# print("hello " + num)
