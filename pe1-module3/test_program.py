@@ -461,3 +461,8 @@
 # num1 = 2
 # num = num1 / num2
 # print("hello " + num)
+
+import math
+
+num = float(input("Enter a number to know it's cube root: "))
+print("The cube root of ",num," is ",math.cbrt(num))
