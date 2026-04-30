@@ -14,6 +14,10 @@ function div() {
     makeOperation("/")
 }
 
+function pow() {
+    makeOperation("**")
+}
+
 function makeOperation(operationKind) {
     const num1Str = document.getElementById("num1").value;
     const num2Str = document.getElementById("num2").value;
@@ -29,6 +33,8 @@ function makeOperation(operationKind) {
         result = num1 *  num2;
     else if (operationKind === "/")
         result = num1 /  num2;
+    else if (operationKind === "**")
+        result = num1 **  num2;
 
 
     document.getElementById("display").value = result;
