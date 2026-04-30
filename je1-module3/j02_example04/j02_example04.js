@@ -1,6 +1,6 @@
 
-function addStudent() {
-    const name = prompt("Enter student name:");
+function addCar() {
+    const name = prompt("Enter Car name:");
 
     if (name) {
         const listItem = document.createElement("li");
