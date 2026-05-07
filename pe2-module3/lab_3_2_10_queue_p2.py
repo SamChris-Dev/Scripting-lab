@@ -16,19 +16,9 @@ class Queue:
             raise QueueError
 
 
-#
-# Code from the previous lab.
-#
-
-
 class SuperQueue(Queue):
     def isempty(self):
         return len(self.queue) == 0
-
-
-#
-# Write new code here.
-#
 
 
 que = SuperQueue()
@@ -40,3 +30,4 @@ for i in range(4):
         print(que.get())
     else:
         print("Queue empty")
+    
