@@ -1,20 +1,33 @@
-def is_palindrome(word):
-    # Remove spaces and convert to lowercase
-    word = word.replace(" ", "").lower()
+text = input("Enter message: ")
 
-    reversed_word = ""
+shift = 0
 
-    # Iterate through each character in the word
-    for char in word:
-        # Prepend the character to the reversed_word
-        reversed_word = char + reversed_word
+while shift == 0:
+    try:    
+        shift = int(input("Enter the cipher shift value (1..25): "))
+        if shift not in range(1,26):
+            raise ValueError
+        
+    except ValueError:
+        shift = 0
 
-    # Check if the word is equal to its reversed version
-    return word == reversed_word
+    if shift == 0:
+        print("Incorrect shift value!")
 
-# Example usage
-user_word = input("Enter a word: ")
-if is_palindrome(user_word):
-    print(f"{user_word} is a palindrome.")
-else:
-    print(f"{user_word} is not a palindrome.")
+cipher = ''
+
+for char in text:
+    if char.isalpha():
+        code = ord(char) + shift
+        if char.isupper():
+            first = ord('A')
+        else:
+            first = ord('a')
+        code -= first
+        code %= 26
+        cipher += chr(first + code)
+    else:
+        cipher += char
+
+print(cipher)
+    
