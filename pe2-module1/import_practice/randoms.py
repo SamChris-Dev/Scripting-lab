@@ -6,10 +6,10 @@
 # for i in range(5):
 #     print(random.random())
 
-# import platform
+import platform
 
-# print(platform.platform())
-# print(platform.machine())
-# print(platform.processor())
-# print(platform.system())
-# print(platform.version())
+print(platform.platform())
+print(platform.machine())
+print(platform.processor())
+print(platform.system())
+print(platform.version())
