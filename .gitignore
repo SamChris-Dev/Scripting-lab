@@ -3,3 +3,5 @@
 __pycache__/
 .Game-venv
 .vscode
+package-lock.json
+package.json
