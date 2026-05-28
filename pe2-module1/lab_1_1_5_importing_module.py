@@ -1,6 +1,6 @@
 import math
 
-# Our own function and variable with the same names as in the math module
+
 def sin(x):
     if 2 * x == pi:
         return 0.99999999
