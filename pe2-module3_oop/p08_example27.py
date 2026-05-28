@@ -1,76 +1,44 @@
-class Shape:
-    """
-    A base class representing a generic geometric shape.
-    """
-    def area(self):
-        """
-        Returns a placeholder string for the area.
-        Subclasses are expected to implement their specific area calculation.
-        """
-        return "Shape area (maybe unknown). "
+class Animal:
+
+    def make_sound(self):
+
+        return "Animal sound (maybe unknown). "
 
 
-class Rectangle(Shape):
-    """
-    A class representing a rectangle, inheriting from Shape.
-    Calculates its area based on width and height.
-    """
-    def __init__(self, width: int, height: int):
-        """
-        Initializes a Rectangle object.
+class Dog(Animal):
 
-        Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-        """
-        self.width = width
-        self.height = height
+    def __init__(self, name: str, breed: str):
 
-    def area(self):
-        """
-        Calculates and returns the area of the rectangle,
-        prefixed by the base class area message.
-        """
-        return super().area() + "Rectangle area: " + str(self.width * self.height)
+        self.name = name
+        self.breed = breed
+
+    def make_sound(self):
+
+        return super().make_sound() + f"{self.name} the {self.breed} says: Woof!"
 
 
-class Circle(Shape):
-    """
-    A class representing a circle, inheriting from Shape.
-    Calculates its area based on the radius.
-    """
-    def __init__(self, radius: int):
-        """
-        Initializes a Circle object.
+class Cat(Animal):
 
-        Args:
-            radius (int): The radius of the circle.
-        """
-        self.radius = radius
+    def __init__(self, name: str):
 
-    def area(self):
-        """
-        Calculates and returns the area of the circle.
-        """
-        return "Circle area: " + str(3.14 * self.radius ** 2)
+        self.name = name
+
+    def make_sound(self):
+
+        return f"{self.name} says: Meow!"
 
 
-def print_area(shape: Shape):
-    """
-    Takes a Shape object and prints the result of its area() method.
+def print_animal_sound(animal: Animal):
 
-    Args:
-        shape (Shape): An instance of the Shape class or its subclasses.
-    """
-    print("shape.area(): " + str(shape.area()))
+    print("animal.make_sound(): " + str(animal.make_sound()))
 
 
 
-shape1 = Shape()
-print_area(shape1)
+animal1 = Animal()
+print_animal_sound(animal1)
 
-rectangle = Rectangle(4, 5)
-print_area(rectangle)
+dog = Dog("Buddy", "Golden Retriever")
+print_animal_sound(dog)
 
-circle = Circle(3)
-print_area(circle)
+cat = Cat("Whiskers")
+print_animal_sound(cat)
