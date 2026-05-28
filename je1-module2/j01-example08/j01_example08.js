@@ -17,7 +17,7 @@ function validateAge() {
     const ERROR_AGE_MSG = "Age should be less than 130 years and greater than 0 years";
     if (myAgeValue < 0 || myAgeValue > 130) {
         console.log(ERROR_AGE_MSG)
-        // alert(ERROR_AGE_MSG);
+       
         const myAgeErrorDiv = document.getElementById("myAgeErrorDiv");
         myAgeErrorDiv.textContent = ERROR_AGE_MSG;
     }

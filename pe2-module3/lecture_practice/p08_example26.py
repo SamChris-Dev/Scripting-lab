@@ -1,4 +1,4 @@
-class InsufficientFundsError(Exception):  # Inherits from Exception
+class InsufficientFundsError(Exception): 
     """Raised when a bank account withdrawal attempt exceeds available funds."""
     pass
 
@@ -13,9 +13,9 @@ class Account:
         self.balance -= amount
 
 
-# Usage
+
 try:
     account = Account(100)
-    account.withdraw(150)  # Raises InsufficientFundsError
+    account.withdraw(150)  
 except InsufficientFundsError as e:
     print(e)  # Output: Not enough funds in your account!
