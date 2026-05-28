@@ -65,15 +65,12 @@ def print_area(shape: Shape):
     print("shape.area(): " + str(shape.area()))
 
 
-# --- Usage Example ---
-# Create an instance of the base Shape class
+
 shape1 = Shape()
 print_area(shape1)
 
-# Create an instance of the Rectangle class
 rectangle = Rectangle(4, 5)
 print_area(rectangle)
 
-# Create an instance of the Circle class
 circle = Circle(3)
 print_area(circle)
