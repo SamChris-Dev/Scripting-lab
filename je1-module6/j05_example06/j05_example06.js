@@ -1,38 +1,42 @@
-function celsiusToFahrenheit(celsius) {
-    return (celsius * 9 / 5) + 32;
+const EXCHANGE_RATE = 0.93; 
+
+function usdToEur(amount) {
+    return amount * EXCHANGE_RATE;
 }
 
-function fahrenheitToCelsius(fahrenheit) {
-    return (fahrenheit - 32) * 5 / 9;
+function eurToUsd(amount) {
+    return amount / EXCHANGE_RATE;
 }
 
-function temperatureConverter() {
+function currencyConverter() {
     let resultDiv = document.getElementById("result");
 
-    let temperature = parseFloat(prompt("Enter temperature: "));
+    let amount = parseFloat(prompt("Enter amount to convert: "));
 
-    let typeInput = prompt("Enter conversion type (C or F): ");
+    let typeInput = prompt("Enter starting currency (USD or EUR): ");
     if (typeInput === null) return;
 
     let type = typeInput.toUpperCase();
 
-    if (isNaN(temperature)) {
-        resultDiv.textContent = "Please enter a valid number for temperature.";
+    if (isNaN(amount) || amount < 0) {
+        resultDiv.textContent = "Please enter a valid positive number for the amount.";
         return;
     }
 
-    if (type === "C" || type === "F") {
-        let convertedTemp;
+    if (type === "USD" || type === "EUR") {
+        let convertedAmount;
+        let targetUnit;
 
-        if (type === "C") {
-            convertedTemp = celsiusToFahrenheit(temperature);
+        if (type === "USD") {
+            convertedAmount = usdToEur(amount);
+            targetUnit = "EUR";
         } else {
-            convertedTemp = fahrenheitToCelsius(temperature);
+            convertedAmount = eurToUsd(amount);
+            targetUnit = "USD";
         }
 
-        let targetUnit = (type === "C" ? "F" : "C");
-        resultDiv.textContent = `${temperature}°${type} is equal to ${convertedTemp.toFixed(2)}°${targetUnit}`;
+        resultDiv.textContent = `${amount.toFixed(2)} ${type} is equal to ${convertedAmount.toFixed(2)} ${targetUnit}`;
     } else {
-        resultDiv.textContent = "Invalid conversion type. Please enter 'C' or 'F'.";
+        resultDiv.textContent = "Invalid currency type. Please enter 'USD' or 'EUR'.";
     }
 }

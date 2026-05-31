@@ -1,50 +1,45 @@
-class Car:
-    def __init__(self, model):
-        self.model = model
+class Animal:
+    def __init__(self, species):
+        self.species = species
 
     def __str__(self):
-        return f"Car model: {self.model}"
-
+        return f"Animal species: {self.species}"
     
-    def is_electric(self):
-        return issubclass(self.__class__, ElectricCar)  
+    def is_bird(self):
+        return issubclass(self.__class__, Bird)  
 
 
-class ElectricCar(Car):
-    def __init__(self, model, battery_range):
-        super().__init__(model) 
-        self.battery_range = battery_range
+class Bird(Animal):
+    def __init__(self, species, wingspan):
+        super().__init__(species) 
+        self.wingspan = wingspan
 
     def __str__(self):
-        
-        return f"Electric Car model: {self.model}, Battery Range: {self.battery_range}km"
+        return f"Bird species: {self.species}, Wingspan: {self.wingspan}cm"
 
 
+animal1 = Animal("Python")
+animal2 = Animal("Python")
+bird1 = Bird("Bald Eagle", 200)
 
-car1 = Car("Honda Civic")
-car2 = Car("Honda Civic")
-electric_car1 = ElectricCar("Tesla Model S", 400)
+print(animal1)  
+print(bird1)   
 
-print(car1)  
-print(electric_car1)   
+print("Is instance: " + str(isinstance(bird1, Animal)))  
 
-print("Is instance: " + str(isinstance(electric_car1, Car)))  
-
-print("The same object: " + str(car1 is car1)) 
-print("The same object: " + str(car1 is car2))  
-print("The same model: " + str(car1.model is car2.model))  
+print("The same object: " + str(animal1 is animal1)) 
+print("The same object: " + str(animal1 is animal2))  
+print("The same species: " + str(animal1.species is animal2.species))  
 
 
-class LuxuryCar(ElectricCar):
-    def __init__(self, model, battery_range, features):
-        super().__init__(model, battery_range)  
-        self.features = features
+class BirdOfPrey(Bird):
+    def __init__(self, species, wingspan, traits):
+        super().__init__(species, wingspan)  
+        self.traits = traits
 
     def get_info(self):
-       
-        return super().__str__() + f"\nFeatures: {self.features}"
+        return super().__str__() + f"\nTraits: {self.traits}"
 
 
-luxury_car = LuxuryCar("Tesla Model X", 500, "Autopilot, Self-parking")
-print(
-    luxury_car.get_info())
+apex_predator = BirdOfPrey("Peregrine Falcon", 120, "Dive-bombing, Exceptional vision")
+print(apex_predator.get_info())

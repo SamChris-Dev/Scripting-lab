@@ -1,6 +1,4 @@
-// LAB: 4.1.12
-// CMD (install package readline-sync): npm install readline-sync
-// CMD (run program): node lab4_1_12.js
+
 const readlineSync = require('readline-sync');
 
 let contacts = [{
@@ -41,7 +39,7 @@ function showContact(choice) {
         if (contacts.length > 0) {
             console.log("All Contacts:");
             for (let i = 0; i < contacts.length; i++) {
-                console.log(`  Contact ${i + 1}:`); // Backticks allow "template literals" for easy variable interpolation.
+                console.log(`  Contact ${i + 1}:`); 
                 console.log("    Name:", contacts[i].name);
                 console.log("    Phone:", contacts[i].phone);
                 console.log("    Email:", contacts[i].email);
@@ -59,7 +57,6 @@ function addContact() {
     let phone = readlineSync.question("Enter contact phone number: ");
     let email = readlineSync.question("Enter contact email: ");
 
-    // Validate data
     if (name && phone && email) {
         contacts.push({name, phone, email});
         console.log("Contact added successfully!");
@@ -88,7 +85,6 @@ function manageContacts() {
     }
 }
 
-// Main loop for continuous user interaction
 let running = true;
 let choice;
 while (running) {
